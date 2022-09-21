@@ -1,0 +1,10 @@
+{
+    "Name": "StardewMotif",
+    "Author": "Vinyks",
+    "Version": "0.1.0",
+    "Description": "Replaces Abigail, Emily, Shane; with the popular german Vtubers: Luny, Mona, Fin",
+    "UniqueID": "Vinyks.StardewMotif",
+    "EntryDll": "StardewMotif.dll",
+    "MinimumApiVersion": "3.0.0",
+    "UpdateKeys": []
+}
