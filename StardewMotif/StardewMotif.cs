@@ -27,22 +27,57 @@ namespace StardewMotif
         }
         public void OnAssetRequested(object sender, AssetRequestedEventArgs e)
         {
+            ////Characters
+            //Luny
             ReplaceAsset<Texture2D>(e, "Portraits/Abigail", "Portraits/luny.png"); 
             ReplaceAsset<Texture2D>(e, "Characters/Abigail", "Characters/luny.png");
             ReplaceAsset<Texture2D>(e, "Portraits/Abigail_Beach", "Portraits/luny_beach.png");
             ReplaceAsset<Texture2D>(e, "Characters/Abigail_Beach", "Characters/luny_beach.png");
+            ReplaceAsset<Dictionary<string, string>>(e, "Characters/Dialogue/Abigail", "Characters/Dialogue/Luny.json");
+            ReplaceAsset<Dictionary<string, string>>(e, "Characters/Dialogue/MarriageDialogueAbigail", "Characters/Dialogue/MarriageDialogueLuny.json");
 
+            //Mona
             ReplaceAsset<Texture2D>(e, "Portraits/Leah", "Portraits/mona.png");
             ReplaceAsset<Texture2D>(e, "Characters/Leah", "Characters/mona.png");
             ReplaceAsset<Texture2D>(e, "Portraits/Leah_Beach", "Portraits/mona_beach.png");
             ReplaceAsset<Texture2D>(e, "Characters/Leah_Beach", "Characters/mona_beach.png");
+            ReplaceAsset<Dictionary<string, string>>(e, "Characters/Dialogue/Leah", "Characters/Dialogue/Mona.json");
+            ReplaceAsset<Dictionary<string, string>>(e, "Characters/Dialogue/MarriageDialogueLeah", "Characters/Dialogue/MarriageDialogueMona.json");
 
+            //Fin
             ReplaceAsset<Texture2D>(e, "Portraits/Sam", "Portraits/fin.png"); 
             ReplaceAsset<Texture2D>(e, "Characters/Sam", "Characters/fin.png");
             ReplaceAsset<Texture2D>(e, "Portraits/Sam_Beach", "Portraits/fin_beach.png");
             ReplaceAsset<Texture2D>(e, "Characters/Sam_Beach", "Characters/fin_beach.png");
+            ReplaceAsset<Dictionary<string, string>>(e, "Characters/Dialogue/Sam", "Characters/Dialogue/Fin.json");
+            ReplaceAsset<Dictionary<string, string>>(e, "Characters/Dialogue/MarriageDialogueSam", "Characters/Dialogue/MarriageDialogueFin.json");
 
+            ////General
+            //Data
             ReplaceAsset<Dictionary<string, string>>(e, "Data/NPCDispositions", "Data/NPCDispositions.json");
+            ReplaceAsset<Dictionary<int, string>>(e, "Data/SecretNotes", "Data/SecretNotes.json");
+            ReplaceAsset<Dictionary<string, string>>(e, "Data/EngagementDialogue", "Data/EngagementDialogue.json");
+            ReplaceAsset<Dictionary<int, string>>(e, "Data/weapons", "Data/weapons.json");
+
+            //Character Dialogue
+            ReplaceAsset<Dictionary<string, string>>(e, "Characters/Dialogue/rainy", "Characters/Dialogue/rainy.json");
+
+            //Strings
+            ReplaceAsset<Dictionary<string, string>>(e, "Strings/Characters", "Strings/Characters.json");
+
+            //Loose Sprites
+            ReplaceAsset<Texture2D>(e, "LooseSprites/logo", "LooseSprites/logo.png");
+            ReplaceAsset<Texture2D>(e, "LooseSprites/emojis", "LooseSprites/emojis.png");
+            ReplaceAsset<Texture2D>(e, "LooseSprites/Concessions", "LooseSprites/Concessions.png");
+            ReplaceAsset<Texture2D>(e, "LooseSprites/Billboard", "LooseSprites/Billboard.png");
+
+            //MiniGames
+            ReplaceAsset<Texture2D>(e, "MiniGames/TitleButtons", "MiniGames/TitleButtons.png");
+
+            //Animals
+            ReplaceAsset<Texture2D>(e, "Animals/BabySheep", "Animals/BabyWoo.png");
+            ReplaceAsset<Texture2D>(e, "Animals/ShearedSheep", "Animals/ShearedWoo.png");
+            ReplaceAsset<Texture2D>(e, "Animals/Sheep", "Animals/Woo.png");
         }
 
         private void ReplaceAsset<T>(AssetRequestedEventArgs e, string replacePath, string assetPath)       
