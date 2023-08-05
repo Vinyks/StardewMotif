@@ -52,6 +52,13 @@ namespace StardewMotif
             ReplaceAsset<Dictionary<string, string>>(e, "Characters/Dialogue/Sam", "Characters/Dialogue/Fin.json");
             ReplaceAsset<Dictionary<string, string>>(e, "Characters/Dialogue/MarriageDialogueSam", "Characters/Dialogue/MarriageDialogueFin.json");
 
+            //Jinja
+            ReplaceAsset<Texture2D>(e, "Portraits/Robin", "Portraits/jinja.png");
+            ReplaceAsset<Texture2D>(e, "Characters/Robin", "Characters/jinja.png");
+            ReplaceAsset<Texture2D>(e, "Portraits/Robin_Beach", "Portraits/jinja_beach.png");
+            ReplaceAsset<Texture2D>(e, "Characters/Robin_Beach", "Characters/jinja_beach.png");
+
+
             //Misc Chars 
             ReplaceAsset<Dictionary<string, string>>(e, "Characters/Dialogue/Sebastian", "Characters/Dialogue/Sebastian.json");
             ReplaceAsset<Dictionary<string, string>>(e, "Characters/Dialogue/Pierre", "Characters/Dialogue/Pierre.json");
