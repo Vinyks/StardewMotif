@@ -58,10 +58,16 @@ namespace StardewMotif
             ReplaceAsset<Texture2D>(e, "Portraits/Robin_Beach", "Portraits/jinja_beach.png");
             ReplaceAsset<Texture2D>(e, "Characters/Robin_Beach", "Characters/jinja_beach.png");
 
+            //Laphi
+            ReplaceAsset<Texture2D>(e, "Portraits/Penny", "Portraits/laphi.png");
+            ReplaceAsset<Texture2D>(e, "Characters/Penny", "Characters/laphi.png");
+            ReplaceAsset<Texture2D>(e, "Portraits/Penny_Beach", "Portraits/laphi_beach.png");
+            ReplaceAsset<Texture2D>(e, "Characters/Penny_Beach", "Characters/laphi_beach.png");
 
             //Misc Chars 
             ReplaceAsset<Dictionary<string, string>>(e, "Characters/Dialogue/Sebastian", "Characters/Dialogue/Sebastian.json");
             ReplaceAsset<Dictionary<string, string>>(e, "Characters/Dialogue/Pierre", "Characters/Dialogue/Pierre.json");
+
 
 
             ////General
