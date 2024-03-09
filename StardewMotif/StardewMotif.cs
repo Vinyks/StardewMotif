@@ -79,6 +79,9 @@ namespace StardewMotif
             //Laphi
             ReplaceCharacter(e, "Penny", "Laphi");
 
+            //Nayami
+            ReplaceCharacter(e, "Emily", "Nayami");
+
             //Misc Chars 
             ReplaceAsset<Dictionary<string, string>>(e, "Characters/Dialogue/Sebastian", "Characters/Dialogue/Sebastian", "json");
             ReplaceAsset<Dictionary<string, string>>(e, "Characters/Dialogue/Pierre", "Characters/Dialogue/Pierre", "json");
@@ -159,34 +162,34 @@ namespace StardewMotif
             ReplaceAsset<Texture2D>(e, "Characters/" + replaceChar + "_Beach", "Characters/" + newChar + "_Beach", "png", false);
         }
 
-        string[] debugDialogueNPCs = {"Abigail", "Sam","Leah","Robin","Penny" };
+        string[] debugDialogueNPCs = {"Emily", "Sam","Leah","Robin","Penny","Emily" };
 
         Task debugTask;
         private void OnButtonPressed(object sender, ButtonPressedEventArgs e)
         {
             if (!Context.IsWorldReady)
                 return;
-            /*
+            
             if (e.Button.ToString()[0] == 'K')
             {
                 if((debugTask != null && debugTask.IsCompleted) || debugTask == null)
                 {
-                    debugTask = DebugDialogue("Robin");
-                    this.Monitor.Log("Activated Debug", LogLevel.Debug);
+                    debugTask = DebugDialogue("Emily");
+                    Monitor.Log("Activated Debug", LogLevel.Debug);
                 }
             }
-            */
+            
         }
         bool queueNextDialogue = false;
         public async Task DebugDialogue(string npcName)
         {
-            this.Monitor.Log("Called", LogLevel.Debug);
+            Monitor.Log("Called", LogLevel.Debug);
 
             string fullPath = @"\Steam\steamapps\common\Stardew Valley\Mods\StardewMotif\assets\Characters\Dialogue\";
             string dialoguePath = @"\Characters\Dialogue\";
             dialoguePath += npcName;
 
-            this.Monitor.Log("Dialogue Path: " + dialoguePath, LogLevel.Debug);
+            Monitor.Log("Dialogue Path: " + dialoguePath, LogLevel.Debug);
             NPC npc = Utility.fuzzyCharacterSearch(npcName, true);
             string json;
             try
@@ -203,7 +206,7 @@ namespace StardewMotif
                         
                         foreach (string s in split)
                         {
-                            this.Monitor.Log("Showing dialogue: " + s, LogLevel.Debug);
+                            Monitor.Log("Showing dialogue: " + s, LogLevel.Debug);
                             Game1.drawDialogue(npc, s);
                             while (Game1.currentSpeaker != null)
                             {
@@ -215,10 +218,10 @@ namespace StardewMotif
             }
             catch(Exception e)
             {
-                this.Monitor.Log("Except: " + e, LogLevel.Debug);
+                Monitor.Log("Except: " + e, LogLevel.Debug);
             }
 
-            this.Monitor.Log("Dialogue Path: " + dialoguePath, LogLevel.Debug);
+            Monitor.Log("Dialogue Path: " + dialoguePath, LogLevel.Debug);
             
         }
     }
